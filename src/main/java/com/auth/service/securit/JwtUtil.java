@@ -25,6 +25,7 @@ public class JwtUtil {
         String token = JWT.create()
                 .withSubject(usr.getEmail()) // define o assunto, o que o token se refere.
                 .withClaim("e-mail", usr.getEmail())// adiciona uma clain(reivindicação) personalizada ao payload do jwt.
+                .withClaim("Role", usr.getRole())
                 .withIssuedAt(new Date()) // define o momento em que o token foi emitido.
                 .withExpiresAt(new Date(System.currentTimeMillis()+ EXPIRATION_TIME)) // difine quando vai expirar
                 .sign(Algorithm.HMAC256(KEY)); // finaliza o processo, calcua a assinatura do token e retorna a stirng jwt.

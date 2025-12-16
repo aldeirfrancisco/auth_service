@@ -30,12 +30,8 @@ public class SecurityConfig {
                 .cors(cors -> {})
                 .authorizeHttpRequests(auth -> auth
                         // endpoints públicos
-                        .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/auth/usuarios/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/cadastro").permitAll()
-
-                        // endpoints protegidos
-                        .requestMatchers(HttpMethod.GET, "/produtos").hasAuthority("ADMIN")
-
                         .anyRequest().authenticated()
                 )
 

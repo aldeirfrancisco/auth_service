@@ -19,11 +19,6 @@ public class User {
     private Long id;
     private String email;
     private String senha;
+    private String role;
 
-
-//    public Collection<? extends GrantedAuthority> authorities() {
-//        return this.getRoles().stream()
-//                .map(role -> new SimpleGrantedAuthority(role.getTipo()))
-//                .collect(Collectors.toList());
-//    }
 }
