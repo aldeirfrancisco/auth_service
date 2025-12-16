@@ -17,5 +17,13 @@ public class User {
             allocationSize = 1
     )
     private Long id;
-    private String nome;
+    private String email;
+    private String senha;
+
+
+//    public Collection<? extends GrantedAuthority> authorities() {
+//        return this.getRoles().stream()
+//                .map(role -> new SimpleGrantedAuthority(role.getTipo()))
+//                .collect(Collectors.toList());
+//    }
 }
